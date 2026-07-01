@@ -54,14 +54,14 @@ export default function Uni() {
         value={country}
         onChangeText={setCountry}
         onSubmitEditing={getUniversities}
-        style={styles.input}
+        style={mainStyles.input}
       />
 
-      <Pressable style={styles.button} onPress={getUniversities}>
-        <Text style={styles.buttonText}>Buscar</Text>
+      <Pressable style={mainStyles.button} onPress={getUniversities}>
+        <Text style={mainStyles.buttonText}>Buscar</Text>
       </Pressable>
 
-      {loading && <Text>Cargando...</Text>}
+      {loading && <Text style={mainStyles.text}>Cargando...</Text>}
 
       {universities && (
         <FlatList
@@ -89,22 +89,6 @@ export default function Uni() {
 }
 
 const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: "#007AFF",
-    padding: 12,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-  },
   card: {
     backgroundColor: "#fff",
     marginVertical: 8,

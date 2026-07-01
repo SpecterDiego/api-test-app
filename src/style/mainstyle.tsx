@@ -14,7 +14,25 @@ export const mainStyles = StyleSheet.create({
   },
   text: {
     color: "#ffffff",
-    fontSize: 15,
+    fontSize: 18,
     textAlign: "center",
+  },
+  input: {
+    fontSize: 20,
+    backgroundColor: "#4f98b4",
+    borderWidth: 1,
+    padding: 18,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  button: {
+    backgroundColor: "#007AFF",
+    padding: 25,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "bold",
   },
 });

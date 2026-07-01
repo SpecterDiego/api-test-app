@@ -80,14 +80,14 @@ export default function Age() {
         value={name}
         onChangeText={setName}
         onSubmitEditing={getAge}
-        style={styles.input}
+        style={mainStyles.input}
       />
 
-      <Pressable style={styles.button} onPress={getAge}>
-        <Text style={styles.buttonText}>Determinar</Text>
+      <Pressable style={mainStyles.button} onPress={getAge}>
+        <Text style={mainStyles.buttonText}>Determinar</Text>
       </Pressable>
 
-      {loading && <Text>Cargando...</Text>}
+      {loading && <Text style={mainStyles.text}>Cargando...</Text>}
 
       {result && (
         <View>
@@ -104,22 +104,3 @@ export default function Age() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  input: {
-    borderWidth: 1,
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: "#007AFF",
-    padding: 12,
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "bold",
-  },
-});
