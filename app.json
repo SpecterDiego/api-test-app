@@ -11,8 +11,9 @@
       "icon": "./assets/expo.icon"
     },
     "android": {
-      "predictiveBackGestureEnabled": false,
-      "package": "com.specterdiego.apitestapp"
+      "package": "com.specterdiego.apitestapp",
+      "permissions": ["INTERNET"],
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",

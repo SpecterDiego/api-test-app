@@ -31,10 +31,11 @@ export default function Uni() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        `https://adamix.net/proxy.php?country=${encodeURIComponent(country)}`,
-      );
+      const url = `https://adamix.net/proxy.php?country=${encodeURIComponent(country)}`;
+      const response = await fetch(url);
 
+      const text = await response.text();
+      console.log(text);
       const json: UniversityResponse[] = await response.json();
 
       setUniversities(json);
